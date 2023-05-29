@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(planetsRouter);
 app.use(launchesRouter);
 
-app.get("/", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
 
